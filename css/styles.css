@@ -27,6 +27,34 @@
     /* bg footer and hero */
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
+ul,
+ol {
+    margin: 0;
+    padding-left: 0;
+}
+
+button {
+    cursor: pointer;
+}
+
+address {
+    font-style: normal;
+}
+
+img {
+    display: block;
+}
+
 .visually-hidden {
     position: absolute;
     width: 1px;
@@ -61,7 +89,46 @@ body {
     color: var(--primary-color);
 }
 
+.container {
+    width: 1200px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+    outline: 2px solid red;
+}
+
+.section {
+    padding-top: 94px;
+    padding-bottom: 94px;
+}
+
+.site-nav {
+    display: flex;
+}
+
+.site-nav-item:not(.site-nav-item:last-child) {
+    margin-right: 50px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header .nav-container {
+    display: flex;
+    align-items: center;
+}
+
+.header {
+    border-bottom: 1px solid var(--border-color);
+}
+
 .logo {
+    margin-right: 93px;
+
     font-family: 'Raleway';
     font-weight: 700;
     font-size: 26px;
@@ -70,11 +137,15 @@ body {
     text-decoration: none;
 }
 
-.menu-nav .logo-part {
+.header-container .logo-part {
     color: var(--black-color);
 }
 
 .nav-link {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
@@ -97,12 +168,19 @@ body {
 }
 
 .address-item {
+    margin-right: 50px;
+
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
     color: var(--primary-color);
     text-decoration: none;
+
+}
+
+.address-item:last-child {
+    margin-right: 0;
 }
 
 .address-item:hover,
@@ -111,10 +189,22 @@ body {
 }
 
 .hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 0;
+    padding-bottom: 0;
+
     background-color: var(--primary-background-color);
+    outline: 2px solid red;
 }
 
 .hero-title {
+    margin-top: 200px;
+    margin-bottom: 30px;
+
+
     font-weight: 900;
     font-size: 44px;
     line-height: 1.36;
@@ -124,6 +214,10 @@ body {
 }
 
 .hero-button {
+    display: block;
+    margin-bottom: 200px;
+    padding: 10px 32px;
+
     font-family: 'Roboto';
     font-weight: 700;
     font-size: 16px;
@@ -134,9 +228,12 @@ body {
     cursor: pointer;
     border: none;
     border-radius: 4px;
+    text-align: center;
 }
 
 .portfolio-btn {
+    padding: 6px 22px;
+
     font-family: 'Roboto';
     font-weight: 500;
     color: var(--secondary-color);
@@ -151,6 +248,8 @@ body {
 
 .portfolio-btn:hover,
 .portfolio-btn:focus {
+    padding: 6px 25px;
+
     color: var(--white-color);
     background-color: var(--accent-color);
 }
@@ -161,14 +260,32 @@ body {
 
 }
 
+.benefits-item {
+    display: flex;
+    margin: 0;
+    padding-left: 0;
+    gap: 30px;
+}
+
 .benefits-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     color: var(--secondary-color);
 }
 
+.benefits-secondary-text {
+    margin-bottom: 0;
+    margin-top: 0;
+    line-height: 1.7;
+}
+
 .section-title {
+    margin-bottom: 50px;
+
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
@@ -176,16 +293,36 @@ body {
     color: var(--secondary-color);
 }
 
-.command {
+.section-galery {
+    padding-top: 0;
+}
+
+.galery {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.section-command {
     background-color: var(--secondary-background-color);
+}
+
+.team-img {
+    display: flex;
+    gap: 30px;
 }
 
 .card {
     width: 270px;
-    background-color: var(--white-color);
+    background: var(--white-color);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
 }
 
 .card-title {
+    padding-top: 30px;
+    padding-bottom: 10px;
+
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -194,6 +331,8 @@ body {
 }
 
 .card-item {
+    padding-bottom: 30px;
+
     font-size: 16px;
     line-height: 1.19;
     text-align: center;
@@ -219,16 +358,38 @@ body {
     color: var(--primary-color);
 }
 
+.footer-logo {
+    font-family: 'Raleway';
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
 .basement .logo-part {
     color: var(--white-color);
 }
 
+
 .basement {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
     background-color: var(--primary-background-color);
 }
 
 .contacts {
     font-style: normal;
+
+}
+
+.footer-contacts {
+    margin-top: 20px;
+}
+
+.adress-item-footer:not(.adress-item-footer:last-child) {
+    padding-bottom: 9px;
 }
 
 .contacts .address-item-bottom {
@@ -256,3 +417,5 @@ body {
 .address-item-map:focus {
     color: var(--accent-color);
 }
+
+/* Portfolio */
